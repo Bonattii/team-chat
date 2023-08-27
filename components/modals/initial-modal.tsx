@@ -25,7 +25,7 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import FileUpload from '@/components/file-upload'
+import { FileUpload } from '@/components/file-upload'
 
 // Validation object for the form using zod
 const formSchema = z.object({
@@ -37,7 +37,7 @@ const formSchema = z.object({
   })
 })
 
-const InitialModal = () => {
+export const InitialModal = () => {
   const [isMounted, setIsMounted] = useState(false)
 
   const router = useRouter()
@@ -143,5 +143,3 @@ const InitialModal = () => {
     </Dialog>
   )
 }
-
-export default InitialModal
