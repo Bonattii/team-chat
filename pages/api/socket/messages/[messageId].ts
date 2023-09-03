@@ -89,7 +89,7 @@ export default async function handler(
       return res.status(404).json({ error: 'Member not found' })
     }
 
-    const isMessageOwner = member.profileId === member.id
+    const isMessageOwner = message.memberId === member.id
     const isAdmin = member.role === MemberRole.ADMIN
     const isModerator = member.role === MemberRole.MODERATOR
     const canModify = isMessageOwner || isAdmin || isModerator
